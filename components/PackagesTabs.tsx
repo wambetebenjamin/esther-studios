@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { PACKAGES, packagesForType, formatPrice } from "@/lib/packages";
+import { packagesForType, formatPrice } from "@/lib/packages";
 import { SESSION_TYPES, type SessionTypeId } from "@/lib/site";
 
 type Props = {
@@ -198,5 +198,3 @@ export default function PackagesTabs({ initialType = "wedding", showAllLink = tr
     </section>
   );
 }
-
-export { PACKAGES };

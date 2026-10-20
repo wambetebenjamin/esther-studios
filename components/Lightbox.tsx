@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, X, Download } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { GalleryImage } from "@/lib/galleries";
 import { SITE } from "@/lib/site";
 import DownloadPreviewButton from "./DownloadPreviewButton";
@@ -234,8 +234,4 @@ export default function Lightbox({ images, index, onClose, onIndexChange }: Prop
       )}
     </AnimatePresence>
   );
-}
-
-export function LightboxDownloadIcon() {
-  return <Download size={16} aria-hidden="true" />;
 }
