@@ -10,12 +10,18 @@ import { SESSION_TYPES, type SessionTypeId } from "@/lib/site";
 type Props = {
   initialType?: SessionTypeId;
   showAllLink?: boolean;
+  /** Label for the per package call to action. */
+  bookLabel?: string;
 };
 
 /**
  * Animation effect 5: package tab switch transition (AnimatePresence).
  */
-export default function PackagesTabs({ initialType = "wedding", showAllLink = true }: Props) {
+export default function PackagesTabs({
+  initialType = "wedding",
+  showAllLink = true,
+  bookLabel = "Book This Package",
+}: Props) {
   const [active, setActive] = useState<SessionTypeId>(initialType);
   const packages = packagesForType(active);
 
@@ -180,7 +186,7 @@ export default function PackagesTabs({ initialType = "wedding", showAllLink = tr
                   className="studio-btn"
                   style={{ marginTop: 20, width: "100%" }}
                 >
-                  Book This Package
+                  {bookLabel}
                 </Link>
               </article>
             ))}

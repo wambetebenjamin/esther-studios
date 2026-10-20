@@ -60,7 +60,7 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      <PackagesTabs showAllLink={false} />
+      <PackagesTabs showAllLink={false} bookLabel="Book Now" />
 
       <section style={{ backgroundColor: "#f2f4f8", paddingTop: 88, paddingBottom: 88 }}>
         <div className="es-container">
